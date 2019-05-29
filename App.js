@@ -1,15 +1,21 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import Login from "./components/Login";
 export default class App extends React.Component {
-
   render() {
-
     return (
-      <View style={{ paddingTop: 50 }}>
-        <Login />
+      <View style={styles.container}>
+        <Text>orking on your app!</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
