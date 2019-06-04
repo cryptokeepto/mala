@@ -1,11 +1,12 @@
 import React from 'react';
+import Register from './components/Register';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>orking on your app!</Text>
+       <Register/>
       </View>
     );
   }

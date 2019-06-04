@@ -9,7 +9,7 @@ TouchableOpacity,
 export default class Register extends React.Component {
   render() {
     return (
-      
+
         <View style={styles.regform}>
         <Text style={styles.header}>Registration </Text>
         <TextInput style={styles.textinput} placholder="Your Name" 
@@ -17,6 +17,8 @@ export default class Register extends React.Component {
         <TextInput style={styles.textinput} placholder="Your Email"
           underlineColorAndroid={'transparent'}/>
         <TextInput style={styles.textinput} placholder="Your Password"
+        underlineColorAndroid={'transparent'}/>
+        <TextInput style={styles.textinput} placholder="Comfirm Password"
         underlineColorAndroid={'transparent'}/>
         <TouchableOpacity style={styles.button}>
         <Text style={styles.btntext}>Sign Up </Text>
@@ -29,6 +31,7 @@ export default class Register extends React.Component {
   const styles = StyleSheet.create({
     regform: {
       alignSelf: 'stretch',
+      backgroundColor: '#045792',
     },
     header: {
       fontSize: 24,
