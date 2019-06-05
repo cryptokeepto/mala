@@ -5,27 +5,37 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native';
-import { KeyboardAvoidingView } from './C:/Users/MAY/AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/react-native';
+
 
 export default class Register extends React.Component {
+
+constructor(props){
+  super(props);
+  this.state {
+    username: '',
+    password: '',
+  }
+}
+
   render() {
     return (
-<KeyboardAvoidingView behavior='padding' style={styles.wrapper}>
-      <View style={styles.container}>
-        <Text style={styles.header}>Registration </Text>
-        <TextInput style={styles.textInput} placholder="Your Name"
-          underlineColorAndroid={'transparent'} />
-        <TextInput style={styles.textInput} placholder="Your Email"
-          underlineColorAndroid={'transparent'} />
-        <TextInput style={styles.textInput} placholder="Your Password"
-          underlineColorAndroid={'transparent'} />
-        <TextInput style={styles.textinput} placholder="Comfirm Password"
-          underlineColorAndroid={'transparent'} />
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btntext}>Sign Up </Text>
-        </TouchableOpacity>
-      </View>
+      <KeyboardAvoidingView style={styles.wrapper}>
+        <View style={styles.container}>
+          <Text style={styles.header}>- Registration -</Text>
+          <TextInput style={styles.textInput} placholder="Your Name"
+            underlineColorAndroid={'transparent'} />
+          <TextInput style={styles.textInput} placholder="Your Email"
+            underlineColorAndroid={'transparent'} />
+          <TextInput style={styles.textInput} placholder="Your Password"
+            underlineColorAndroid={'transparent'} />
+          <TextInput style={styles.textinput} placholder="Comfirm Password"
+            underlineColorAndroid={'transparent'} />
+          <TouchableOpacity style={styles.btn}>
+            <Text >Sign Up </Text>
+          </TouchableOpacity>
+        </View>
       </KeyboardAvoidingView>
     );
   }
@@ -33,6 +43,7 @@ export default class Register extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
+    backgroundColor: '#2896d3',
   },
   container: {
     flex: 1,
@@ -44,7 +55,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 24,
-    marginBottom: 60,
+    marginBottom: 10,
     color: '#fff',
     fontWeight: 'bold',
   },
@@ -52,6 +63,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     padding: 16,
     marginBottom: 20,
+    color: '#2896d3',
     backgroundColor: '#fff',
   },
   btn: {
