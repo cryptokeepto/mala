@@ -11,28 +11,33 @@ import {
 
 export default class Register extends React.Component {
 
-constructor(props){
-  super(props);
-  this.state {
-    username: '',
-    password: '',
+  state = {
+    username: "",
+    password: ""
   }
-}
 
   render() {
+    const {
+      weapper,
+      container,
+      header,
+      textInput,
+      btn
+    } = styles
+
     return (
-      <KeyboardAvoidingView style={styles.wrapper}>
-        <View style={styles.container}>
-          <Text style={styles.header}>- Registration -</Text>
-          <TextInput style={styles.textInput} placholder="Your Name"
+      <KeyboardAvoidingView style={wrapper}>
+        <View style={container}>
+          <Text style={header}>- Registration -</Text>
+          <TextInput style={textInput} placholder="Your Name"
             underlineColorAndroid={'transparent'} />
-          <TextInput style={styles.textInput} placholder="Your Email"
+          <TextInput style={textInput} placholder="Your Email"
             underlineColorAndroid={'transparent'} />
-          <TextInput style={styles.textInput} placholder="Your Password"
+          <TextInput style={textInput} placholder="Your Password"
             underlineColorAndroid={'transparent'} />
-          <TextInput style={styles.textinput} placholder="Comfirm Password"
+          <TextInput style={textinput} placholder="Comfirm Password"
             underlineColorAndroid={'transparent'} />
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={btn}>
             <Text >Sign Up </Text>
           </TouchableOpacity>
         </View>
@@ -72,36 +77,4 @@ const styles = StyleSheet.create({
     padding: 26,
     alignItems: 'center',
   }
-  // const styles = StyleSheet.create({
-  //   regform: {
-  //     alignSelf: 'stretch',
-  //     backgroundColor: '#045792',
-  //   },
-  //   header: {
-  //     fontSize: 24,
-  //     color: '#fff',
-  //     paddingBottom: 10,
-  //     marginBottom: 40,
-  //     borderBottomColor: '#199187',
-  //     borderBottomWidth: 1,
-  //   },
-  //   textinput: {
-  //     alignSelf: 'stretch',
-  //     height: 40,
-  //     marginBottom: 30,
-  //     color: '#fff',
-  //     borderBottomColor: '#f8f8f8',
-  //     borderBottomWidth: 1,
-  //   },
-  //   button: {
-  //     alignSelf: 'stretch',
-  //     alignItems: 'stretch',
-  //     padding: 20,
-  //     backgroundColor: '#59cbbd',
-  //     marginTop: 30,
-  //   },
-  //   btntext: {
-  //     color: '#fff',
-  //     fontWeight: 'bold',
-  //   }
 });
