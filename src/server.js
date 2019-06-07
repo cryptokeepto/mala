@@ -4,7 +4,7 @@ const hostname = "0.0.0.0";
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.end("index"); 
+  res.send("index"); 
 });
 
 app.listen(port, hostname, () => {
